@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Your Restaurant Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("lEpxs0zsiTJQjw78i");
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <div class="language-selector">
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="ar">العربية</option>
+            </select>
+        </div>
+        <h1>Showcase Your Restaurant Menu Digitally</h1>
+        <h2>"Welcome to our service for creating stylish digital restaurant menus with interactive barcodes, Join us and make the customer experience in your restaurant easier and more appealing
+        </h2>
+    </header>
+
+    <h1>Our Features</h1>
+
+    <section class="features">
+        <div class="feature">
+            <i class='far fa-file' style='font-size:66px'></i>
+            <h2>Distinctive <br>Menu Design</h2>
+        </div>
+        
+        <div class ="feature">
+            <i class='fas fa-mobile-alt' style='font-size:66px'></i>
+            <h2>Responsive<br> Design</h2>
+        </div>
+        <div class="feature">
+            <i class='fas fa-qrcode' style='font-size:66px'></i>
+            <h2>Interactive Barcode<br>for Easy Access</h2>
+        </div>
+    </section>
+
+    <section class="subscription-info">
+        <h1>Subscribe to Our Service</h1>
+        
+        <div class="subscription-option">
+            <h2>Basic Service - 150SR</h2>
+            <h3>(Modern Menu Board Design)</h3>
+            <p class="description">This service includes designing a cohesive menu board that features a modern menu style compatible with your restaurant's theme.</p>
+            <ul class="feature">           
+                <li>Modern and up-to-date design in line with the restaurant's theme.</li>
+                <li>High-quality and professional design.</li>
+                <li>The option to include the complete menu in an attractive and organized manner.</li>
+            <br><br><br><br>
+            <button id="show-subscription-form-button-basic">Subscribe to Service</button>
+        </div>
+        <div class="subscription-option">
+            <h2>Premium Service - 350SR</h2>
+            <h3>(Design a Barcode for the Electronic Menu with Menu Board)</h3>
+            <p class="description">This service offers everything provided in the basic service, along with the design of an interactive barcode that includes the complete electronic menu, enabling customers to access orders directly and quickly.</p>
+            <ul class="feature">
+                <li>Modern and up-to-date design in line with the restaurant's theme.</li>
+                <li>Adding an interactive barcode containing the electronic menu.</li>
+                <li>A smooth user experience allowing customers to efficiently browse the food items online.</li>
+                <li>High-quality and professional design.</li>
+            
+            <button id="show-subscription-form-button-premium">Subscribe to Service</button>
+        </div>
+    </section>
+
+    <form id="contact-form">
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <p>Contact us today to get started with enhancing your restaurant.</p>
+            <label for="contact_name">Name:</label>
+            <input type="text" id="contact_name" name="contact_name" required>
+            <label for="contact_email">Email:</label>
+            <input type="email" id="contact_email" name="contact_email" required>
+            <label for="contact_message">Message:</label>
+            <textarea id="contact_message" name="contact_message" required></textarea>
+            <button type="submit" class="btn">Contact Us</button>
+        </section>
+    </form>
+
+    <div id="subscription-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal-button" class="close">&times;</span>
+            <form id="subscription-form">
+                <div class="form-group">
+                    <label for="subscription-name">Name:</label>
+                    <input type="text" id="subscription-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="subscription-restaurant">Restaurant Name:</label>
+                    <input type="text" id="subscription-restaurant" name="restaurant" required>
+                </div>
+                <div class="form-group">
+                    <label for="subscription-mobile">Phone Number:</label>
+                    <input type="tel" id="subscription-mobile" name="mobile" pattern="[0-9]{10}" required>
+                </div>
+                <div class="form-group">
+                    <label for="subscription-email">Email:</label>
+                    <input type="email" id="subscription-email" name="email" required>
+                </div>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Restaurant Design and Digitalization Service</p>
+    </footer>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

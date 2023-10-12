@@ -1,0 +1,382 @@
+/* styles.css */
+body {
+        background: linear-gradient(to right, rgb(123, 97, 235), rgb(197, 222, 238), rgb(166, 48, 177), rgb(166, 207, 255));
+        background-size: 400% 100%;
+        animation: gradientAnimation 10s ease infinite;
+        font-family: 'Smart Man Art', 'FontAwesome';
+        src: url('../fonts/fontawesome-webfont.eot?v=4.6.3');
+        src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.6.3') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        background-color: #b1c2d4; /* لون خلفي للصفحة */
+        color: #363333;
+        margin: 0;
+        padding: 0;
+    }
+
+    @keyframes bounceIn {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-30px);
+        }
+        60% {
+            transform: translateY(-15px);
+        }
+    }
+    .language-selector {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 999;
+    }
+
+    .language-selector select {
+        padding: 5px;
+        font-size: 16px;
+        text-align: center;
+        background-color: #fff;
+        border: none;
+        border-radius: 15px;
+    }
+    header {
+        text-align: center;
+        padding: 100px 0;
+        color: rgb(46, 43, 43);
+    }
+     h1 {
+        animation: bounceIn 2s infinite;
+        text-align: center;
+        font-size: 74px;
+    }
+    header h2{
+        text-align: center;
+        font-size: 28px;
+        padding: 100px 160px;
+        color: #363333;
+        line-height: 1.7; /* زيادة ارتفاع السطر لإضافة مسافة بين الأسطر */
+        letter-spacing: 3px; /* زيادة مسافة بين الحروف */
+
+    }
+    @media (max-width: 767px) {
+        header h2 {
+            max-width: 100%; /* تحديد العرض الأقصى للنص */
+            white-space: normal;
+            font-size: 28px; /* تقليل حجم النص على الجوال */
+            padding: 20px; /* تقليل التباعد العمودي للنص */
+        }
+    }
+    /* أضف أنميشن عند التمرير لأسفل وللأعلى */
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    .scroll-animation {
+        animation: fadeIn 1s ease-in-out;
+    }
+    /* أضف معلومات الاشتراك وأزرار الاشتراك */
+    .subscription-info {
+        text-align: center;
+
+    }
+    .subscription-info li {
+        margin-bottom: 20px;
+    }
+    .subscription-option button {
+        background-color: #007bff;
+        color: white;
+        font-size: 20px;
+        font-family: 'Smart Man Art', 'Calibri', sans-serif;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    .subscription-option:hover {
+        border: 2px solid #ffc107; /* لون الحدود عند تمرير المؤشر */
+        transform: scale(1.05); /* تكبير البوكس عند تمرير المؤشر */
+    }
+    /* تصميم البوكسات */
+    .subscription-option {
+        border: 2px solid #007bff;
+        transition: border 0.3s, transform 0.3s;
+        padding: 20px;
+        text-align: center;
+        background-color: rgb(223, 232, 238);
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        max-width: 480px;
+        margin: 50px;
+        display: inline-block;
+        width: calc(50% - 20px);
+    }
+    
+    .subscription-option h2 {
+        font-size: 40px;
+        margin-bottom: 10px;
+        color: #007bff;
+    }
+    
+    .subscription-option h3 {
+        font-size: 25px;
+        margin-bottom: 10px;
+        color: #007bff;
+    }
+    .subscription-option .description {
+        color: #333;
+        font-size: 18px;
+        font-weight: 650;
+
+    }
+    
+    .subscription-option .featur {
+        text-align: right;
+        margin-top: 10px;
+    }
+    
+    .subscription-option .featur li {
+        color: #333;
+    }
+    
+    .subscription-option button {
+        background-color: #007bff;
+        color: white;
+        font-size: 20px;
+        font-family: 'Smart Man Art', 'Calibri', sans-serif;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    .subscription-option:hover {
+        border: 2px solid #ffc107;
+        transform: scale(1.05);
+    }
+    
+    @media screen and (max-width: 768px) {
+        .subscription-option {
+            width: 100%;
+            margin: 10px 0;
+            height: auto;
+        }
+    }
+    
+    
+    /* تصميم البوكسات في الشاشات الكبيرة */
+    @media screen and (min-width: 769px) {
+        .subscription-info {
+            text-align: center; /* محاذاة العناصر في وسط الصفحة */
+        }}
+/* تصميم البوكسات في الشاشات الكبيرة */
+@media screen and (min-width: 769px) {
+    .features {
+        display: flex; /* توزيع البوكسات أفقيًا في الشاشات الكبيرة */
+        justify-content: space-around; /* توزيع البوكسات بالتساوي أفقيًا */
+    }
+}
+    @keyframes gradientAnimation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+    @keyframes bounce {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-10px);
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .features {
+            flex-direction: column; /* تغيير التوجيه إلى عمودي */
+            align-items: center; /* مركز العناصر بشكل عمودي */
+        }
+        .feature {
+            text-align: center;
+            margin: 20px; /* إضافة مسافة بين العناصر */
+        }
+    }
+    .features {
+        display: flex;
+        justify-content: space-around; /* توزيع العناصر بالتساوي في الأفقي */
+        align-items: center;
+        padding: 20px 0; /* إضافة مسافة بين العناصر من الأعلى والأسفل */
+    }
+    .feature {
+        text-align: center;
+        margin: 20px; /* إضافة مسافة بين العناصر من الجوانب */
+    }
+
+    /* أسلوب لزيادة حجم الخط */
+    .feature h2 {
+        font-size: 40px;
+    }
+
+    /* أسلوب لاستبدال الأيقونات بأيقونات متحركة */
+    .feature i {
+        font-size: 66px;
+        animation: rotateIcon 2s linear infinite;
+    }
+/* أسلوب لتحريك الأيقونة */
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* تنسيق النموذج والزر */
+.h2 {
+    font-size: 40px;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+}
+.contact form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px; /* تحديد العرض الأقصى للنموذج */
+}
+.contact label {
+    font-weight: bold;
+    margin-bottom: 5px;
+
+}
+.contact input,
+.contact textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+}
+
+.contact textarea {
+    resize: none;
+    height: 150px;
+}
+.contact #contact_message {
+    resize: none;
+    border: 1px solid #ccc;
+    height: 160px;
+    width:80%;
+
+}
+.contact .btn {
+    background-color: #007bff;
+    color: white;
+    font-size: 19px;
+    font-family: 'Smart Man Art', 'Calibri', sans-serif;
+    padding: 10px 20px; /* تعديل حجم الزر */
+    align-self: center; /* وضع الزر في المنتصف */
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(85, 84, 84, 0.7);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+
+}
+
+#close-modal-button {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px; /* تحديد المسافة من الأعلى */
+    right: 10px; /* تحديد المسافة من اليمين */
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+/* اسلوب تصميم الحقول والأزرار في النموذج */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    width: 100%;
+    display: block;}
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="tel"]::placeholder {
+    font-style: italic;
+    color: #aaa;
+}
+
+/* اسلوب تصميم زر الاشتراك في النموذج */
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    font-family: 'Smart Man Art', 'Calibri', sans-serif;
+    font-size: 20px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color:  #31353a;
+    color: white;
+}
+
+@media screen and (max-width: 767px) {
+    footer {
+        width: 100%;
+        padding: 20px;
+    }
+}

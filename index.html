@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>مطعمك على الإنترنت</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init("lEpxs0zsiTJQjw78i");
+})();
+</script>
+</head>
+<body>
+    <header>
+        <div class="language-selector">
+            <select id="language-select">
+                <option value="ar">العربية</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+        <h1>استعرض منيو مطعمك رقميًا</h1>
+        <h2>مرحبًا بك في خدمتنا الاحترافية لتصميم منيو بورد للمطاعم وإضافة باركود متفاعل يحتوي على منيو الكتروني كامل. انضم إلينا واجعل تجربة العملاء في مطعمك أكثر سهولة وجاذبية.
+        </h2>
+    </header>
+
+    <h1>مميزاتنا</h1>
+
+    <section class="features">
+        <div class="feature">
+            <i class='far fa-file' style='font-size:66px'></i>
+            <h2>تصميم منيو <br>مميز</h2>
+        </div>
+        
+        <div class="feature">
+            <i class='fas fa-mobile-alt' style='font-size:66px'></i>
+            <h2>تصميم<br> متجاوب</h2>
+        </div>
+        <div class="feature">
+            <i class='fas fa-qrcode	' style='font-size:66px'></i>
+            <h2> باركود متفاعل<br>لسهولة الوصول</h2>
+        </div>
+    </section>
+
+    <section class="subscription-info">
+        <h1>اشترك في خدمتنا</h1>
+        
+        <div class="subscription-option">
+            <h2>الخدمة الأساسية - 150 ريال</h2>
+            <h3>(تصميم منيو بورد بأسلوب عصري)</h3>
+            <p class="description">تتضمن هذه الخدمة تصميم منيو بورد متناسق يحتوي على قائمة الطعام بأسلوب عصري يتناسب مع ثيم المحل.</p>
+            <ul class="featur">           
+                <br>
+            <li>تصميم مستحدث وعصري متوافق مع ثيم المحل.</li>
+            <li>جودة عالية واحترافية في التصميم.</li>
+            <li>إمكانية تضمين قائمة الطعام الكاملة بشكل جاذب ومنسق.</li>
+            <br><br>
+            <button id="show-subscription-form-button-basic">اشترك بالخدمة</button>
+        </div>
+        <div class="subscription-option">
+            <h2>الخدمة المميزة - 350 ريال</h2>
+            <h3>(تصميم باركود للمنيو الالكتروني مع المنيو بورد)</h3>
+            <p class="description">هذه الخدمة توفر كل ما تقدمه الخدمة الأساسية بالإضافة إلى تصميم باركود متفاعل يحتوي على منيو الكتروني لتمكين العملاء من الوصول المباشر والسريع للطلبات.</p>
+            <ul class="featur">
+            <li>تصميم مستحدث وعصري متوافق مع ثيم المحل.</li>
+            <li>إضافة باركود متفاعل يحتوي على قائمة الطعام الإلكترونية.</li>
+            <li>تجربة مستخدم تمكن العملاء من تصفح الأطعمة عبر الانترنت بكفاءة.</li>
+            <li>جودة عالية واحترافية في التصميم.</li>
+            
+            <button id="show-subscription-form-button-premium">اشترك بالخدمة</button>
+        </div>
+    </section>
+
+    <form id="contact-form">
+        <section class="contact">
+            <h2>تواصل معنا</h2>
+            <p>اتصل بنا اليوم للبدء في تطوير مطعك.</p>
+            <label for="contact_name">الاسم:</label>
+            <input type="text" id="contact_name" name="contact_name" required>
+            <label for="contact_email">البريد الإلكتروني:</label>
+            <input type="email" id="contact_email" name="contact_email" required>
+            <label for="contact_message">الرسالة:</label>
+            <textarea id="contact_message" name="contact_message" required></textarea>
+            <button type="submit" class="btn">اتصل بنا</button>
+        </section>
+    </form>
+
+    <div id="subscription-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal-button" class="close">&times;</span>
+            <form id="subscription-form">
+                <div class="form-group">
+                    <label for="subscription-name">الاسم:</label>
+                    <input type="text" id="subscription-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="subscription-restaurant">اسم المطعم:</label>
+                    <input type="text" id="subscription-restaurant" name="restaurant" required>
+                </div>
+                <div class="form-group">
+                    <label for="subscription-mobile">رقم الجوال (10 أرقام):</label>
+                    <input type="tel" id="subscription-mobile" name="mobile" pattern="[0-9]{10}" required>
+                </div>
+                <div class="form-group">
+                    <label for="subscription-email">البريد الإلكتروني:</label>
+                    <input type="email" id="subscription-email" name="email" required>
+                </div>
+                <button type="submit" class="btn">اشترك</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 خدمة تصميم و رقمنة المطاعم</p>
+    </footer>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
